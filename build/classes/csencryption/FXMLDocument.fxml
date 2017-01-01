@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csencryption.FXMLDocumentController">
+    <children>
+        <Button fx:id="genKey" layoutX="393.0" layoutY="300.0" onAction="#genAutoKeys" text="Auto-Gen Keys" visible="false" />
+      <TextField fx:id="pm1" layoutX="198.0" layoutY="46.0" promptText="Enter a Prime Number" />
+      <TextField fx:id="pm2" layoutX="439.0" layoutY="46.0" promptText="Enter a Prime Number" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="198.0" layoutY="29.0" prefHeight="17.0" prefWidth="149.0" text="Prime Number 1 (p)" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="439.0" layoutY="29.0" prefHeight="17.0" prefWidth="149.0" text="Prime Number 2 (q)" />
+      <TextArea fx:id="puKey" layoutX="173.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextArea fx:id="prKey" layoutX="414.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label alignment="CENTER" layoutX="174.0" layoutY="71.0" prefHeight="17.0" prefWidth="200.0" text="Public Key" />
+      <Label alignment="CENTER" layoutX="410.0" layoutY="71.0" prefHeight="17.0" prefWidth="200.0" text="Private Key" />
+      <Button fx:id="encryptT" layoutX="203.0" layoutY="402.0" mnemonicParsing="false" onAction="#Encrypt" text="Encrypt" />
+      <Button fx:id="decryptT" layoutX="272.0" layoutY="402.0" mnemonicParsing="false" onAction="#Decrypt" prefHeight="25.0" prefWidth="63.0" text="Decrypt" />
+      <TextArea fx:id="testArea" editable="false" layoutX="414.0" layoutY="349.0" prefHeight="200.0" prefWidth="200.0" promptText="To start using this program, please enter 2 prime numbers and test the prime. Once the test passes, you'll be given an option to Auto-Generate Keys or an option to enter your own values to test if they're relatively prime to r, which is found by using the equation       r = (p-1)*(q-1)." wrapText="true" />
+      <Button fx:id="testPrime" layoutX="357.0" layoutY="46.0" mnemonicParsing="false" onAction="#gen_pq" text="Test Prime" />
+      <TextField fx:id="message" layoutX="187.0" layoutY="373.0" prefHeight="25.0" prefWidth="160.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="187.0" layoutY="349.0" prefHeight="17.0" prefWidth="160.0" text="Message to Encrypt/Decrypt" textAlignment="CENTER" />
+      <Button fx:id="clear" layoutX="479.0" layoutY="549.0" mnemonicParsing="false" onAction="#clear" text="Clear Text" />
+      <Button fx:id="genKey1" layoutX="301.0" layoutY="300.0" onAction="#generateKEYS" text="Generate Keys" visible="false" />
+      <TextField fx:id="userE" layoutX="14.0" layoutY="169.0" prefHeight="25.0" prefWidth="72.0" visible="false" />
+      <TextField fx:id="userD" layoutX="86.0" layoutY="169.0" prefHeight="25.0" prefWidth="72.0" visible="false" />
+      <Label fx:id="labelE" layoutX="47.0" layoutY="152.0" text="e" visible="false" />
+      <Label fx:id="labelD" layoutX="119.0" layoutY="152.0" text="d" visible="false" />
+      <Button fx:id="testRP" layoutX="24.0" layoutY="200.0" mnemonicParsing="false" onAction="#testRP" text="Test Relatively Prime" visible="false" />
+    </children>
+</AnchorPane>
