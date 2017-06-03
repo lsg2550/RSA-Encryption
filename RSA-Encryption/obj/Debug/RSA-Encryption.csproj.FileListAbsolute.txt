@@ -1,0 +1,12 @@
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\bin\Debug\RSA-Encryption.exe.config
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\bin\Debug\RSA-Encryption.exe
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\bin\Debug\RSA-Encryption.pdb
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\bin\Debug\en\RSA-Encryption.resources.dll
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.csprojResolveAssemblyReference.cache
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\obj\Debug\RSA_Encryption.rsaForm.resources
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\obj\Debug\RSA_Encryption.Properties.Resources.resources
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\obj\Debug\RSA_Encryption.rsaForm.en.resources
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.csproj.GenerateResource.Cache
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\obj\Debug\en\RSA-Encryption.resources.dll
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.exe
+c:\users\luis\documents\visual studio 2015\Projects\RSA-Encryption\RSA-Encryption\obj\Debug\RSA-Encryption.pdb
