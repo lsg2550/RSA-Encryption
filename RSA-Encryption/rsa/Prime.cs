@@ -41,6 +41,40 @@ namespace RSA_Encryption.rsa {
             }
         }
 
+        public static string getFactors(int num) {
+            int temp = num, prime = 1;
+            string output = "";
+
+            if (num > MAX_INT) {
+                return "";
+            }
+            if (num <= 1) {
+                return "";
+            }
+
+            int i = 1;
+            while ((temp > 1) && (++i <= Math.Sqrt(num))) {
+                while (temp % i == 0) {
+                    temp /= i;
+
+                    if (prime == 0) {
+                        output += "*";
+                    }
+                    if (prime == 1) {
+                        prime = 0;
+                    }
+
+                    output += i;
+                }
+            }
+
+            if (prime == 1) {
+                return "";
+            } else {
+                return output;
+            }
+        }
+
         public static string getCandidates(int textboxR) {
             string temp = "", line = "";
             int r = textboxR, n = r + 1;

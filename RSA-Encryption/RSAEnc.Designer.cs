@@ -35,25 +35,40 @@
             this.labelQ = new System.Windows.Forms.Label();
             this.labelP = new System.Windows.Forms.Label();
             this.groupbox2 = new System.Windows.Forms.GroupBox();
+            this.labelCandidates = new System.Windows.Forms.Label();
+            this.textboxCandidates = new System.Windows.Forms.TextBox();
+            this.labelR = new System.Windows.Forms.Label();
+            this.textboxR = new System.Windows.Forms.TextBox();
+            this.labelN = new System.Windows.Forms.Label();
+            this.textboxN = new System.Windows.Forms.TextBox();
             this.textboxLog = new System.Windows.Forms.TextBox();
             this.labelLog = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupbox1 = new System.Windows.Forms.GroupBox();
-            this.textboxN = new System.Windows.Forms.TextBox();
-            this.labelN = new System.Windows.Forms.Label();
-            this.textboxR = new System.Windows.Forms.TextBox();
-            this.labelR = new System.Windows.Forms.Label();
-            this.textboxCandidates = new System.Windows.Forms.TextBox();
-            this.labelCandidates = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textboxProdOfK = new System.Windows.Forms.TextBox();
+            this.textboxPrimeFactK = new System.Windows.Forms.TextBox();
+            this.labelProductsOfK = new System.Windows.Forms.Label();
+            this.labelPrimeFactorsK = new System.Windows.Forms.Label();
+            this.textboxK = new System.Windows.Forms.TextBox();
+            this.labelK = new System.Windows.Forms.Label();
+            this.submitK = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.labelE = new System.Windows.Forms.Label();
+            this.labelD = new System.Windows.Forms.Label();
+            this.textboxE = new System.Windows.Forms.TextBox();
+            this.textboxD = new System.Windows.Forms.TextBox();
+            this.buttonCheckED = new System.Windows.Forms.Button();
             this.groupbox2.SuspendLayout();
             this.groupbox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // textboxQ
             // 
             resources.ApplyResources(this.textboxQ, "textboxQ");
-            this.textboxQ.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textboxQ.BackColor = System.Drawing.SystemColors.Window;
             this.textboxQ.Name = "textboxQ";
             // 
             // buttonSubmit
@@ -66,7 +81,7 @@
             // textboxP
             // 
             resources.ApplyResources(this.textboxP, "textboxP");
-            this.textboxP.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textboxP.BackColor = System.Drawing.SystemColors.Window;
             this.textboxP.Name = "textboxP";
             // 
             // labelQ
@@ -90,6 +105,39 @@
             resources.ApplyResources(this.groupbox2, "groupbox2");
             this.groupbox2.Name = "groupbox2";
             this.groupbox2.TabStop = false;
+            // 
+            // labelCandidates
+            // 
+            resources.ApplyResources(this.labelCandidates, "labelCandidates");
+            this.labelCandidates.Name = "labelCandidates";
+            // 
+            // textboxCandidates
+            // 
+            resources.ApplyResources(this.textboxCandidates, "textboxCandidates");
+            this.textboxCandidates.Name = "textboxCandidates";
+            this.textboxCandidates.ReadOnly = true;
+            // 
+            // labelR
+            // 
+            resources.ApplyResources(this.labelR, "labelR");
+            this.labelR.Name = "labelR";
+            // 
+            // textboxR
+            // 
+            resources.ApplyResources(this.textboxR, "textboxR");
+            this.textboxR.Name = "textboxR";
+            this.textboxR.ReadOnly = true;
+            // 
+            // labelN
+            // 
+            resources.ApplyResources(this.labelN, "labelN");
+            this.labelN.Name = "labelN";
+            // 
+            // textboxN
+            // 
+            resources.ApplyResources(this.textboxN, "textboxN");
+            this.textboxN.Name = "textboxN";
+            this.textboxN.ReadOnly = true;
             // 
             // textboxLog
             // 
@@ -124,50 +172,101 @@
             this.groupbox1.Name = "groupbox1";
             this.groupbox1.TabStop = false;
             // 
-            // textboxN
-            // 
-            resources.ApplyResources(this.textboxN, "textboxN");
-            this.textboxN.Name = "textboxN";
-            this.textboxN.ReadOnly = true;
-            // 
-            // labelN
-            // 
-            resources.ApplyResources(this.labelN, "labelN");
-            this.labelN.Name = "labelN";
-            // 
-            // textboxR
-            // 
-            resources.ApplyResources(this.textboxR, "textboxR");
-            this.textboxR.Name = "textboxR";
-            this.textboxR.ReadOnly = true;
-            // 
-            // labelR
-            // 
-            resources.ApplyResources(this.labelR, "labelR");
-            this.labelR.Name = "labelR";
-            // 
-            // textboxCandidates
-            // 
-            resources.ApplyResources(this.textboxCandidates, "textboxCandidates");
-            this.textboxCandidates.Name = "textboxCandidates";
-            this.textboxCandidates.ReadOnly = true;
-            // 
-            // labelCandidates
-            // 
-            resources.ApplyResources(this.labelCandidates, "labelCandidates");
-            this.labelCandidates.Name = "labelCandidates";
-            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.submitK);
+            this.groupBox3.Controls.Add(this.textboxProdOfK);
+            this.groupBox3.Controls.Add(this.textboxPrimeFactK);
+            this.groupBox3.Controls.Add(this.labelProductsOfK);
+            this.groupBox3.Controls.Add(this.labelPrimeFactorsK);
+            this.groupBox3.Controls.Add(this.textboxK);
+            this.groupBox3.Controls.Add(this.labelK);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
+            // 
+            // textboxProdOfK
+            // 
+            resources.ApplyResources(this.textboxProdOfK, "textboxProdOfK");
+            this.textboxProdOfK.Name = "textboxProdOfK";
+            this.textboxProdOfK.ReadOnly = true;
+            // 
+            // textboxPrimeFactK
+            // 
+            resources.ApplyResources(this.textboxPrimeFactK, "textboxPrimeFactK");
+            this.textboxPrimeFactK.Name = "textboxPrimeFactK";
+            this.textboxPrimeFactK.ReadOnly = true;
+            // 
+            // labelProductsOfK
+            // 
+            resources.ApplyResources(this.labelProductsOfK, "labelProductsOfK");
+            this.labelProductsOfK.Name = "labelProductsOfK";
+            // 
+            // labelPrimeFactorsK
+            // 
+            resources.ApplyResources(this.labelPrimeFactorsK, "labelPrimeFactorsK");
+            this.labelPrimeFactorsK.Name = "labelPrimeFactorsK";
+            // 
+            // textboxK
+            // 
+            resources.ApplyResources(this.textboxK, "textboxK");
+            this.textboxK.Name = "textboxK";
+            // 
+            // labelK
+            // 
+            resources.ApplyResources(this.labelK, "labelK");
+            this.labelK.Name = "labelK";
+            // 
+            // submitK
+            // 
+            resources.ApplyResources(this.submitK, "submitK");
+            this.submitK.Name = "submitK";
+            this.submitK.UseVisualStyleBackColor = true;
+            this.submitK.Click += new System.EventHandler(this.submitK_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.buttonCheckED);
+            this.groupBox4.Controls.Add(this.textboxD);
+            this.groupBox4.Controls.Add(this.textboxE);
+            this.groupBox4.Controls.Add(this.labelD);
+            this.groupBox4.Controls.Add(this.labelE);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // labelE
+            // 
+            resources.ApplyResources(this.labelE, "labelE");
+            this.labelE.Name = "labelE";
+            // 
+            // labelD
+            // 
+            resources.ApplyResources(this.labelD, "labelD");
+            this.labelD.Name = "labelD";
+            // 
+            // textboxE
+            // 
+            resources.ApplyResources(this.textboxE, "textboxE");
+            this.textboxE.Name = "textboxE";
+            // 
+            // textboxD
+            // 
+            resources.ApplyResources(this.textboxD, "textboxD");
+            this.textboxD.Name = "textboxD";
+            // 
+            // buttonCheckED
+            // 
+            resources.ApplyResources(this.buttonCheckED, "buttonCheckED");
+            this.buttonCheckED.Name = "buttonCheckED";
+            this.buttonCheckED.UseVisualStyleBackColor = true;
             // 
             // rsaForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelLog);
@@ -182,6 +281,10 @@
             this.groupbox2.PerformLayout();
             this.groupbox1.ResumeLayout(false);
             this.groupbox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,6 +308,19 @@
         private System.Windows.Forms.Label labelCandidates;
         private System.Windows.Forms.TextBox textboxCandidates;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label labelProductsOfK;
+        private System.Windows.Forms.Label labelPrimeFactorsK;
+        private System.Windows.Forms.TextBox textboxK;
+        private System.Windows.Forms.Label labelK;
+        private System.Windows.Forms.TextBox textboxProdOfK;
+        private System.Windows.Forms.TextBox textboxPrimeFactK;
+        private System.Windows.Forms.Button submitK;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textboxD;
+        private System.Windows.Forms.TextBox textboxE;
+        private System.Windows.Forms.Label labelD;
+        private System.Windows.Forms.Label labelE;
+        private System.Windows.Forms.Button buttonCheckED;
     }
 }
 

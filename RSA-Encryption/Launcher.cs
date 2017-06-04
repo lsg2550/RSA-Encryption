@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RSA_Encryption {
-    static class Program {
+    static class Launcher {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

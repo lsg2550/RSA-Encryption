@@ -80,11 +80,45 @@ namespace RSA_Encryption {
             //Clear TextBoxes
             textboxP.Clear();
             textboxQ.Clear();
+            textboxCandidates.Clear();
+            textboxN.Clear();
+            textboxR.Clear();
+            textboxPrimeFactK.Clear();
+            textboxProdOfK.Clear();
             textboxLog.Clear();
+            textboxE.Clear();
+            textboxD.Clear();
             textboxLog.Text = Prime.toString();
 
             //Disable Groups
             groupbox2.Hide();
+            groupBox3.Hide();
+            groupBox4.Hide();
+        }
+
+        private void submitK_Click(object sender, EventArgs ex) {
+            string factors = "";
+            int k;
+
+            if (!int.TryParse(textboxK.Text, out k)) {
+            } else {
+                if (Prime.isPrime(k)) {
+                    textboxPrimeFactK.Text = k + " is a prime factor";
+                } else {
+                    factors = Prime.getFactors(k);
+                    textboxPrimeFactK.Text = factors;
+                }
+            }
+
+            int index = factors.LastIndexOf("*");
+            //textboxLog.Text += Environment.NewLine + index; //Logging
+            if (index != -1) {
+                int e = Evaluate.eval(factors.Substring(0, index));
+                //textboxLog.Text += Environment.NewLine + factors; //Logging
+                int d = Evaluate.eval(factors.Substring(index + 1, (factors.Length - 1) - index));
+
+                textboxProdOfK.Text = e + "*" + d;
+            }
         }
     }
 }
