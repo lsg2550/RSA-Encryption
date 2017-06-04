@@ -526,7 +526,7 @@
     <value>True</value>
   </data>
   <data name="textboxLog.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Horizontal</value>
+    <value>Vertical</value>
   </data>
   <data name="textboxLog.Size" type="System.Drawing.Size, System.Drawing">
     <value>154, 114</value>
@@ -919,18 +919,6 @@
   <data name="&gt;&gt;submitK.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="buttonCheckED.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 60</value>
-  </data>
-  <data name="buttonCheckED.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 23</value>
-  </data>
-  <data name="buttonCheckED.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="buttonCheckED.Text" xml:space="preserve">
-    <value>Check E and D</value>
-  </data>
   <data name="&gt;&gt;buttonCheckED.Name" xml:space="preserve">
     <value>buttonCheckED</value>
   </data>
@@ -942,15 +930,6 @@
   </data>
   <data name="&gt;&gt;buttonCheckED.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="textboxD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 38</value>
-  </data>
-  <data name="textboxD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 20</value>
-  </data>
-  <data name="textboxD.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;textboxD.Name" xml:space="preserve">
     <value>textboxD</value>
@@ -964,15 +943,6 @@
   <data name="&gt;&gt;textboxD.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="textboxE.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 13</value>
-  </data>
-  <data name="textboxE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 20</value>
-  </data>
-  <data name="textboxE.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;textboxE.Name" xml:space="preserve">
     <value>textboxE</value>
   </data>
@@ -985,21 +955,6 @@
   <data name="&gt;&gt;textboxE.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="labelD.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 41</value>
-  </data>
-  <data name="labelD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 13</value>
-  </data>
-  <data name="labelD.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="labelD.Text" xml:space="preserve">
-    <value>D:</value>
-  </data>
   <data name="&gt;&gt;labelD.Name" xml:space="preserve">
     <value>labelD</value>
   </data>
@@ -1011,6 +966,45 @@
   </data>
   <data name="&gt;&gt;labelD.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelE.Name" xml:space="preserve">
+    <value>labelE</value>
+  </data>
+  <data name="&gt;&gt;labelE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelE.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;labelE.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 164</value>
+  </data>
+  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 89</value>
+  </data>
+  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="groupBox4.Text" xml:space="preserve">
+    <value>Compute E and D</value>
+  </data>
+  <data name="groupBox4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="labelE.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1039,28 +1033,97 @@
   <data name="&gt;&gt;labelE.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="groupBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>314, 164</value>
+  <data name="labelD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="groupBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 89</value>
+  <data name="labelD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 41</value>
   </data>
-  <data name="groupBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="labelD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 13</value>
   </data>
-  <data name="groupBox4.Text" xml:space="preserve">
-    <value>Compute E and D</value>
+  <data name="labelD.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;groupBox4.Name" xml:space="preserve">
+  <data name="labelD.Text" xml:space="preserve">
+    <value>D:</value>
+  </data>
+  <data name="&gt;&gt;labelD.Name" xml:space="preserve">
+    <value>labelD</value>
+  </data>
+  <data name="&gt;&gt;labelD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelD.Parent" xml:space="preserve">
     <value>groupBox4</value>
   </data>
-  <data name="&gt;&gt;groupBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;labelD.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="textboxE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 13</value>
   </data>
-  <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
+  <data name="textboxE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 20</value>
+  </data>
+  <data name="textboxE.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textboxE.Name" xml:space="preserve">
+    <value>textboxE</value>
+  </data>
+  <data name="&gt;&gt;textboxE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textboxE.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;textboxE.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textboxD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 38</value>
+  </data>
+  <data name="textboxD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 20</value>
+  </data>
+  <data name="textboxD.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textboxD.Name" xml:space="preserve">
+    <value>textboxD</value>
+  </data>
+  <data name="&gt;&gt;textboxD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textboxD.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;textboxD.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonCheckED.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 60</value>
+  </data>
+  <data name="buttonCheckED.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 23</value>
+  </data>
+  <data name="buttonCheckED.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonCheckED.Text" xml:space="preserve">
+    <value>Check E and D</value>
+  </data>
+  <data name="&gt;&gt;buttonCheckED.Name" xml:space="preserve">
+    <value>buttonCheckED</value>
+  </data>
+  <data name="&gt;&gt;buttonCheckED.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCheckED.Parent" xml:space="preserve">
+    <value>groupBox4</value>
+  </data>
+  <data name="&gt;&gt;buttonCheckED.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

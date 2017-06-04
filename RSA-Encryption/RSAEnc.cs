@@ -50,8 +50,8 @@ namespace RSA_Encryption {
 
                 //GUI Updates
                 groupbox2.Show();
-                textboxN.Text += n;
-                textboxR.Text += q;
+                textboxN.Text = n + "";
+                textboxR.Text = r + "";
 
                 //Warnings to User regarding primes
                 if (n < 90) {
@@ -65,7 +65,7 @@ namespace RSA_Encryption {
                 }
 
                 //Display Prime Candidates
-                textboxCandidates.Text = Prime.getCandidates((p - 1) * (q - 1));
+                textboxCandidates.Text = Prime.getCandidates(r);
 
                 //Toggle GroupBox3
                 groupBox3.Show();
@@ -97,6 +97,9 @@ namespace RSA_Encryption {
         }
 
         private void submitK_Click(object sender, EventArgs ex) {
+            textboxPrimeFactK.Clear();
+            textboxProdOfK.Clear();
+
             string factors = "";
             int k;
 
@@ -118,7 +121,48 @@ namespace RSA_Encryption {
                 int d = Evaluate.eval(factors.Substring(index + 1, (factors.Length - 1) - index));
 
                 textboxProdOfK.Text = e + "*" + d;
+                groupBox4.Show();
             }
+        }
+
+        private void buttonCheckED_Click(object sender, EventArgs e) {
+            string temp = "";
+            int eX = int.Parse(textboxE.Text),
+                d = int.Parse(textboxD.Text),
+                r = int.Parse(textboxR.Text),
+                N = int.Parse(textboxN.Text);
+
+
+            temp += "e = " + eX + Environment.NewLine;
+            temp += "d = " + d + Environment.NewLine;
+            temp += "N = " + N + Environment.NewLine;
+            temp += "r = " + r + Environment.NewLine;
+            temp += "e*d = " + eX * d + Environment.NewLine;
+            temp += "e*d mod r = " + (eX * d) % r + Environment.NewLine;
+
+
+            if (GCD.gcd(eX, N) == 1) {
+                temp += "e and N are relatively prime" + Environment.NewLine;
+            } else {
+                temp += "e and N are not relatively prime; gcd(e,N) = " + GCD.gcd(eX, N) + Environment.NewLine;
+            }
+            if (GCD.gcd(d, N) == 1) {
+                temp += "d and N are relatively prime" + Environment.NewLine;
+            } else {
+                temp += "d and N are not relatively prime; gcd(d,N) = " + GCD.gcd(d, N) + Environment.NewLine;
+            }
+            if (GCD.gcd(eX, r) == 1) {
+                temp += "e and r are relatively prime" + Environment.NewLine;
+            } else {
+                temp += "e and r are not relatively prime; gcd(e,r) = " + GCD.gcd(eX, r) + Environment.NewLine;
+            }
+            if (GCD.gcd(d, r) == 1) {
+                temp += "d and r are relatively prime" + Environment.NewLine;
+            } else {
+                temp += "d and r are not relatively prime; gcd(d,r) = " + GCD.gcd(d, r) + Environment.NewLine;
+            }
+
+            textboxLog.Text = temp;
         }
     }
 }

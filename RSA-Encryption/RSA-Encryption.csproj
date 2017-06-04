@@ -58,6 +58,7 @@
     <Compile Include="Launcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rsa\Evaluate.cs" />
+    <Compile Include="rsa\GCD.cs" />
     <Compile Include="rsa\Prime.cs" />
     <EmbeddedResource Include="RSAEnc.en.resx">
       <DependentUpon>RSAEnc.cs</DependentUpon>

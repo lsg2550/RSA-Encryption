@@ -260,6 +260,7 @@
             resources.ApplyResources(this.buttonCheckED, "buttonCheckED");
             this.buttonCheckED.Name = "buttonCheckED";
             this.buttonCheckED.UseVisualStyleBackColor = true;
+            this.buttonCheckED.Click += new System.EventHandler(this.buttonCheckED_Click);
             // 
             // rsaForm
             // 
