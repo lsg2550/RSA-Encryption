@@ -46,23 +46,31 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupbox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.submitK = new System.Windows.Forms.Button();
             this.textboxProdOfK = new System.Windows.Forms.TextBox();
             this.textboxPrimeFactK = new System.Windows.Forms.TextBox();
             this.labelProductsOfK = new System.Windows.Forms.Label();
             this.labelPrimeFactorsK = new System.Windows.Forms.Label();
             this.textboxK = new System.Windows.Forms.TextBox();
             this.labelK = new System.Windows.Forms.Label();
-            this.submitK = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.labelE = new System.Windows.Forms.Label();
-            this.labelD = new System.Windows.Forms.Label();
-            this.textboxE = new System.Windows.Forms.TextBox();
-            this.textboxD = new System.Windows.Forms.TextBox();
             this.buttonCheckED = new System.Windows.Forms.Button();
+            this.textboxD = new System.Windows.Forms.TextBox();
+            this.textboxE = new System.Windows.Forms.TextBox();
+            this.labelD = new System.Windows.Forms.Label();
+            this.labelE = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textboxEncDec = new System.Windows.Forms.TextBox();
+            this.textBoxMsg = new System.Windows.Forms.TextBox();
+            this.buttonEncDec = new System.Windows.Forms.Button();
+            this.checkboxEncDec = new System.Windows.Forms.CheckBox();
             this.groupbox2.SuspendLayout();
             this.groupbox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // textboxQ
@@ -185,6 +193,13 @@
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
+            // submitK
+            // 
+            resources.ApplyResources(this.submitK, "submitK");
+            this.submitK.Name = "submitK";
+            this.submitK.UseVisualStyleBackColor = true;
+            this.submitK.Click += new System.EventHandler(this.submitK_Click);
+            // 
             // textboxProdOfK
             // 
             resources.ApplyResources(this.textboxProdOfK, "textboxProdOfK");
@@ -217,13 +232,6 @@
             resources.ApplyResources(this.labelK, "labelK");
             this.labelK.Name = "labelK";
             // 
-            // submitK
-            // 
-            resources.ApplyResources(this.submitK, "submitK");
-            this.submitK.Name = "submitK";
-            this.submitK.UseVisualStyleBackColor = true;
-            this.submitK.Click += new System.EventHandler(this.submitK_Click);
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.buttonCheckED);
@@ -235,26 +243,6 @@
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // labelE
-            // 
-            resources.ApplyResources(this.labelE, "labelE");
-            this.labelE.Name = "labelE";
-            // 
-            // labelD
-            // 
-            resources.ApplyResources(this.labelD, "labelD");
-            this.labelD.Name = "labelD";
-            // 
-            // textboxE
-            // 
-            resources.ApplyResources(this.textboxE, "textboxE");
-            this.textboxE.Name = "textboxE";
-            // 
-            // textboxD
-            // 
-            resources.ApplyResources(this.textboxD, "textboxD");
-            this.textboxD.Name = "textboxD";
-            // 
             // buttonCheckED
             // 
             resources.ApplyResources(this.buttonCheckED, "buttonCheckED");
@@ -262,11 +250,78 @@
             this.buttonCheckED.UseVisualStyleBackColor = true;
             this.buttonCheckED.Click += new System.EventHandler(this.buttonCheckED_Click);
             // 
+            // textboxD
+            // 
+            resources.ApplyResources(this.textboxD, "textboxD");
+            this.textboxD.Name = "textboxD";
+            // 
+            // textboxE
+            // 
+            resources.ApplyResources(this.textboxE, "textboxE");
+            this.textboxE.Name = "textboxE";
+            // 
+            // labelD
+            // 
+            resources.ApplyResources(this.labelD, "labelD");
+            this.labelD.Name = "labelD";
+            // 
+            // labelE
+            // 
+            resources.ApplyResources(this.labelE, "labelE");
+            this.labelE.Name = "labelE";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.label1);
+            this.groupBox5.Controls.Add(this.textboxEncDec);
+            this.groupBox5.Controls.Add(this.textBoxMsg);
+            this.groupBox5.Controls.Add(this.buttonEncDec);
+            this.groupBox5.Controls.Add(this.checkboxEncDec);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // textboxEncDec
+            // 
+            resources.ApplyResources(this.textboxEncDec, "textboxEncDec");
+            this.textboxEncDec.Name = "textboxEncDec";
+            this.textboxEncDec.ReadOnly = true;
+            // 
+            // textBoxMsg
+            // 
+            resources.ApplyResources(this.textBoxMsg, "textBoxMsg");
+            this.textBoxMsg.Name = "textBoxMsg";
+            // 
+            // buttonEncDec
+            // 
+            resources.ApplyResources(this.buttonEncDec, "buttonEncDec");
+            this.buttonEncDec.Name = "buttonEncDec";
+            this.buttonEncDec.UseVisualStyleBackColor = true;
+            this.buttonEncDec.Click += new System.EventHandler(this.buttonEncDec_Click);
+            // 
+            // checkboxEncDec
+            // 
+            resources.ApplyResources(this.checkboxEncDec, "checkboxEncDec");
+            this.checkboxEncDec.Name = "checkboxEncDec";
+            this.checkboxEncDec.UseVisualStyleBackColor = true;
+            // 
             // rsaForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button1);
@@ -286,6 +341,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,6 +379,13 @@
         private System.Windows.Forms.Label labelD;
         private System.Windows.Forms.Label labelE;
         private System.Windows.Forms.Button buttonCheckED;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textboxEncDec;
+        private System.Windows.Forms.TextBox textBoxMsg;
+        private System.Windows.Forms.Button buttonEncDec;
+        private System.Windows.Forms.CheckBox checkboxEncDec;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

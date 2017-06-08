@@ -94,6 +94,7 @@ namespace RSA_Encryption {
             groupbox2.Hide();
             groupBox3.Hide();
             groupBox4.Hide();
+            groupBox5.Hide();
         }
 
         private void submitK_Click(object sender, EventArgs ex) {
@@ -118,7 +119,7 @@ namespace RSA_Encryption {
             if (index != -1) {
                 int e = Evaluate.eval(factors.Substring(0, index));
                 //textboxLog.Text += Environment.NewLine + factors; //Logging
-                int d = Evaluate.eval(factors.Substring(index + 1, (factors.Length - 1) - index));
+                int d = Evaluate.eval(factors.Substring(index + 1, factors.Length - index - 1));
 
                 textboxProdOfK.Text = e + "*" + d;
                 groupBox4.Show();
@@ -127,10 +128,19 @@ namespace RSA_Encryption {
 
         private void buttonCheckED_Click(object sender, EventArgs e) {
             string temp = "";
+
+            //Note to Self - Perform Checks!
             int eX = int.Parse(textboxE.Text),
                 d = int.Parse(textboxD.Text),
                 r = int.Parse(textboxR.Text),
                 N = int.Parse(textboxN.Text);
+            //Note to Self - Perform Checks!
+
+            //bool
+            bool EandN = false,
+                DandN = false,
+                EandR = false,
+                DandR = false;
 
 
             temp += "e = " + eX + Environment.NewLine;
@@ -143,26 +153,40 @@ namespace RSA_Encryption {
 
             if (GCD.gcd(eX, N) == 1) {
                 temp += "e and N are relatively prime" + Environment.NewLine;
+                EandN = true;
             } else {
                 temp += "e and N are not relatively prime; gcd(e,N) = " + GCD.gcd(eX, N) + Environment.NewLine;
             }
             if (GCD.gcd(d, N) == 1) {
                 temp += "d and N are relatively prime" + Environment.NewLine;
+                DandN = true;
             } else {
                 temp += "d and N are not relatively prime; gcd(d,N) = " + GCD.gcd(d, N) + Environment.NewLine;
             }
             if (GCD.gcd(eX, r) == 1) {
                 temp += "e and r are relatively prime" + Environment.NewLine;
+                EandR = true;
             } else {
                 temp += "e and r are not relatively prime; gcd(e,r) = " + GCD.gcd(eX, r) + Environment.NewLine;
             }
             if (GCD.gcd(d, r) == 1) {
                 temp += "d and r are relatively prime" + Environment.NewLine;
+                DandR = true;
             } else {
                 temp += "d and r are not relatively prime; gcd(d,r) = " + GCD.gcd(d, r) + Environment.NewLine;
             }
 
             textboxLog.Text = temp;
+
+            //if all checks for relative primality are true, then show the new groupbox
+            if (EandN && DandN && EandR && DandR) {
+                groupBox5.Show();
+            }
+            
+        }
+
+        private void buttonEncDec_Click(object sender, EventArgs e) {
+                Prime.encrypt(textboxE, textboxD, textboxN, textBoxMsg,textboxEncDec, checkboxEncDec.Checked);
         }
     }
 }
