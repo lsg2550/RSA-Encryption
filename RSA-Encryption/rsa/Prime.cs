@@ -149,7 +149,7 @@ namespace RSA_Encryption.rsa {
                 textboxEncDec.Text = encryptedMessage;
             } else { //Dec = False - Start of Decrypt
                 string encryptedMessage = textboxMsg.Text, decryptedASCIIMessage = "", decryptedMessage = "";
-                int position, counter = 0;
+                int position = 0, counter = 0;
 
                 while (encryptedMessage.Length > 0) {
                     string encryptedMessageSubBlock = "";
@@ -174,30 +174,30 @@ namespace RSA_Encryption.rsa {
                 while (decryptedASCIIMessage.Length > 0) {
                     position = decryptedASCIIMessage.IndexOf(" ");
                     encryptedMessage = decryptedASCIIMessage.Substring(0, position);
-
+                    
                     while (encryptedMessage.Length > 0) {
                         if (encryptedMessage.Length % 3 == 0) {
                             width = 3;
                         } else {
                             width = 2;
                         }
-
+                        
                         s = encryptedMessage.Substring(0, width);
-
+                        
                         //Remove leading 0 if necessary so C# doesn't get confused when it tries to understand the number
                         while (s.ToCharArray()[0] == '0') {
                             s = s.Substring(1, s.Length - 1);
                         }
 
                         decryptedMessage += Convert.ToChar(int.Parse(s)).ToString();
-                        encryptedMessage = encryptedMessage.Substring(width, encryptedMessage.Length - position - 1);
+                        encryptedMessage = encryptedMessage.Substring(width, encryptedMessage.Length - position);
                     }
 
                     counter = 1 + position;
                     decryptedASCIIMessage = decryptedASCIIMessage.Substring(position + 1, decryptedASCIIMessage.Length - position - 1);
                 }
 
-                textboxMsg.Text = decryptedMessage;
+                textboxEncDec.Text = decryptedMessage;
             }
         }
 
