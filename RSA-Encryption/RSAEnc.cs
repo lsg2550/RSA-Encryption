@@ -128,13 +128,23 @@ namespace RSA_Encryption {
 
         private void buttonCheckED_Click(object sender, EventArgs e) {
             string temp = "";
+            int eX, d, r, N;
+            int k; //Temp
 
-            //Note to Self - Perform Checks!
-            int eX = int.Parse(textboxE.Text),
-                d = int.Parse(textboxD.Text),
-                r = int.Parse(textboxR.Text),
+            //Check for non-integers errors
+            if (int.TryParse(textboxE.Text, out k) && int.TryParse(textboxD.Text, out k)
+                && int.TryParse(textboxR.Text, out k) && int.TryParse(textboxN.Text, out k)) {
+                eX = int.Parse(textboxE.Text);
+                d = int.Parse(textboxD.Text);
+                r = int.Parse(textboxR.Text);
                 N = int.Parse(textboxN.Text);
-            //Note to Self - Perform Checks!
+            } else {
+                eX = -1;
+                d = -1;
+                r = -1;
+                N = -1;
+                temp += "A previous entry (e, d, r, N) is failing to parse, please check that there are no non-integer characters in their textboxes." + Environment.NewLine;
+            }
 
             //bool
             bool EandN = false,
@@ -182,11 +192,11 @@ namespace RSA_Encryption {
             if (EandN && DandN && EandR && DandR) {
                 groupBox5.Show();
             }
-            
+
         }
 
         private void buttonEncDec_Click(object sender, EventArgs e) {
-                Prime.encrypt(textboxE, textboxD, textboxN, textBoxMsg,textboxEncDec, checkboxEncDec.Checked);
+            Prime.encrypt(textboxE, textboxD, textboxN, textBoxMsg, textboxEncDec, checkboxEncDec.Checked);
         }
     }
 }

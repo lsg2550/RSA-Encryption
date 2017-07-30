@@ -313,6 +313,8 @@
             // checkboxEncDec
             // 
             resources.ApplyResources(this.checkboxEncDec, "checkboxEncDec");
+            this.checkboxEncDec.Checked = true;
+            this.checkboxEncDec.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkboxEncDec.Name = "checkboxEncDec";
             this.checkboxEncDec.UseVisualStyleBackColor = true;
             // 

@@ -78,11 +78,23 @@ namespace RSA_Encryption.rsa {
         }
 
         public static void encrypt(TextBox textboxE, TextBox textboxD, TextBox textboxN, TextBox textboxMsg, TextBox textboxEncDec, bool encOrDec) {
-            //Note to Self - Perform Checks!
-            int e = int.Parse(textboxE.Text),
-                d = int.Parse(textboxD.Text),
+            //Clear Previous Entry
+            textboxEncDec.Text = "";
+
+            int k; //Temp
+            int e, d, N;
+
+            if (int.TryParse(textboxE.Text, out k) && int.TryParse(textboxD.Text, out k) && int.TryParse(textboxN.Text, out k)) {
+                e = int.Parse(textboxE.Text);
+                d = int.Parse(textboxD.Text);
                 N = int.Parse(textboxN.Text);
-            //Note to Self - Perform Checks!
+            } else {
+                e = -1;
+                d = -1;
+                N = -1;
+                textboxMsg.Text = "There was an error in parsing (e, d, N) please check for non-integer characters in those textboxes.";
+                return;
+            }
 
             //Message
             string s = textboxMsg.Text;
@@ -174,16 +186,16 @@ namespace RSA_Encryption.rsa {
                 while (decryptedASCIIMessage.Length > 0) {
                     position = decryptedASCIIMessage.IndexOf(" ");
                     encryptedMessage = decryptedASCIIMessage.Substring(0, position);
-                    
+
                     while (encryptedMessage.Length > 0) {
                         if (encryptedMessage.Length % 3 == 0) {
                             width = 3;
                         } else {
                             width = 2;
                         }
-                        
+
                         s = encryptedMessage.Substring(0, width);
-                        
+
                         //Remove leading 0 if necessary so C# doesn't get confused when it tries to understand the number
                         while (s.ToCharArray()[0] == '0') {
                             s = s.Substring(1, s.Length - 1);
